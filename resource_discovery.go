@@ -12,9 +12,9 @@ import (
 func DiscoveryResource() *schema.Resource {
 	return &schema.Resource{
 		Create: createToken,
-		Read:   clearToken,
+		Read:   readToken,
 		Update: createToken,
-		Delete: clearToken,
+		Delete: deleteToken,
 		Schema: map[string]*schema.Schema{
 			"address": &schema.Schema{
 				Type:     schema.TypeString,
@@ -45,11 +45,18 @@ func createToken(d *schema.ResourceData, m interface{}) error {
 	}
 	defer r.Body.Close()
 	body, err := ioutil.ReadAll(r.Body)
+	if err != nil {
+		return err
+	}
 	d.SetId(string(body))
 	return nil
 }
 
-func clearToken(d *schema.ResourceData, m interface{}) error {
+func readToken(d *schema.ResourceData, m interface{}) error {
+	return nil
+}
+
+func deleteToken(d *schema.ResourceData, m interface{}) error {
 	d.SetId("")
 	return nil
 }

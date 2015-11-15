@@ -1,7 +1,32 @@
 {
-	"ImportPath": "github.com/alexkappa/terraform-etcd-discovery",
+	"ImportPath": "github.com/alexkappa/terraform-provider-etcd",
 	"GoVersion": "go1.5.1",
 	"Deps": [
+		{
+			"ImportPath": "github.com/coreos/etcd/Godeps/_workspace/src/github.com/ugorji/go/codec",
+			"Comment": "v2.3.0-alpha.0-40-g185097f",
+			"Rev": "185097ffaa627b909007e772c175e8fefac17af3"
+		},
+		{
+			"ImportPath": "github.com/coreos/etcd/Godeps/_workspace/src/golang.org/x/net/context",
+			"Comment": "v2.3.0-alpha.0-40-g185097f",
+			"Rev": "185097ffaa627b909007e772c175e8fefac17af3"
+		},
+		{
+			"ImportPath": "github.com/coreos/etcd/client",
+			"Comment": "v2.3.0-alpha.0-40-g185097f",
+			"Rev": "185097ffaa627b909007e772c175e8fefac17af3"
+		},
+		{
+			"ImportPath": "github.com/coreos/etcd/pkg/pathutil",
+			"Comment": "v2.3.0-alpha.0-40-g185097f",
+			"Rev": "185097ffaa627b909007e772c175e8fefac17af3"
+		},
+		{
+			"ImportPath": "github.com/coreos/etcd/pkg/types",
+			"Comment": "v2.3.0-alpha.0-40-g185097f",
+			"Rev": "185097ffaa627b909007e772c175e8fefac17af3"
+		},
 		{
 			"ImportPath": "github.com/hashicorp/errwrap",
 			"Rev": "7554cd9344cec97297fa6649b055a8c98c2a1e55"
@@ -87,6 +112,10 @@
 		{
 			"ImportPath": "github.com/mitchellh/reflectwalk",
 			"Rev": "eecf4c70c626c7cfbb95c90195bc34d386c74ac6"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "1d9fd3b8333e891c0e7353e1adcfe8a612573033"
 		}
 	]
 }
