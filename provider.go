@@ -15,8 +15,7 @@ func Provider() *schema.Provider {
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
-			"etcd_discovery": DiscoveryResource(),
-			"etcd_key":       KeyResource(),
+			"etcd_key": KeyResource(),
 		},
 		ConfigureFunc: configureProvider,
 	}
